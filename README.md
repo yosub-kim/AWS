@@ -11,13 +11,14 @@ OS : Amazon Linux AMI 2018.03.0(HVM)
 $ chmod 400 [.pem 파일]
 $ ssh -i [.pem 파일] ec2-user@[접속할 인스턴스 Public IP]
 
-Web 서버 설치
+Web 서버 설치 및 자동실행
 $ sudo yum -y update
 $ sudo yum install -y httpd
 $ sudo service httpd start
-
-자동 실행
 $ sudo chkconfig httpd on
+
+파일 전송
+$ scp -i [.pem 파일] [upload file] ec2-user@[접속할 인스턴스 Public IP]:~/
 ~~~
 
 #### 2.2 ELB를 사용한 부하 분산
