@@ -23,7 +23,7 @@ CREATE TABLE book
 	-- 서적명
 	name varchar(30) COMMENT '서적명',
 	-- 서적 가격
-	price int COMMENT 서적가격',
+	price int COMMENT '서적가격',
 	-- 저자ID
 	authorid varchar(10) NOT NULL COMMENT '저자ID',
 	PRIMARY KEY (id)
