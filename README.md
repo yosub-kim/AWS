@@ -33,7 +33,7 @@ $ scp -i [.pem 파일] [upload file] ec2-user@[접속할 인스턴스 Public IP]
 3. 레코드 설정 후 레지스트라 등록 (빠르면 몇분, 오래걸릴 땐 12시간 이상 걸리는 경우도 있음)
 4. 동작 확인
 
-####2.4 CloudFront를 사용한 데이터 전달
+#### 2.4 CloudFront를 사용한 데이터 전달
 1. CloudFront 기동
 2. Web (Web 콘텐츠 전달) 혹은 RTMP (스트리밍 전송 프로토콜)
 
