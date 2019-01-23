@@ -21,8 +21,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="366">
-                <caret line="80" column="27" lean-forward="true" selection-start-line="80" selection-start-column="27" selection-end-line="80" selection-end-column="27" />
+              <first_editor relative-caret-position="653">
+                <caret line="95" column="8" selection-start-line="95" selection-start-column="8" selection-end-line="95" selection-end-column="8" />
               </first_editor>
               <second_editor />
             </state>
@@ -52,8 +52,8 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
-    <option name="width" value="1920" />
-    <option name="height" value="984" />
+    <option name="width" value="1249" />
+    <option name="height" value="1016" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -115,18 +115,18 @@
       <workItem from="1548139860845" duration="672000" />
       <workItem from="1548148981334" duration="3628000" />
       <workItem from="1548152905770" duration="318000" />
-      <workItem from="1548171679736" duration="2968000" />
+      <workItem from="1548171679736" duration="3228000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8370000" />
+    <option name="totallyTimeSpent" value="8630000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1920" height="984" extended-state="0" />
+    <frame x="0" y="23" width="1249" height="1016" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12832801" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1797846" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -144,7 +144,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32900432" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32847533" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -163,8 +163,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="366">
-            <caret line="80" column="27" lean-forward="true" selection-start-line="80" selection-start-column="27" selection-end-line="80" selection-end-column="27" />
+          <first_editor relative-caret-position="653">
+            <caret line="95" column="8" selection-start-line="95" selection-start-column="8" selection-end-line="95" selection-end-column="8" />
           </first_editor>
           <second_editor />
         </state>

@@ -70,11 +70,11 @@ $ sudo yum -y install tomcat8
 JDBC 드라이버 설치
 $ sudo yum install -y mysql-connector-java
 ~~~
-4. Web Application Deploy (.War file EC2 인스턴스로 업로드)
+#### 3.4 Web Application Deploy (.War file EC2 인스턴스로 업로드)
 ~~~
 $ sudo cp [.war 파일 경로] /usr/share/tomcat8/webapps
 ~~~
-5. Tomcat8 작동
+#### 3.5 Tomcat8 작동
 ~~~
 Tomcat 8 작동 및 자동실행
 $ sudo service tomcat8 start
@@ -93,7 +93,7 @@ $ sudo vi /usr/share/tomcat8/webapps/manager/META-INF/context.xml
      allow="127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1" /> -->
 > 주석 처리 해준다.
 ~~~
-6. 동작 확인
+#### 3.6 동작 확인
 ~~~
 > http://[EC2 Public DNS]:8080/[War name]/[File name]
 ~~~
