@@ -34,10 +34,70 @@ $ scp -i [.pem 파일] [upload file] ec2-user@[접속할 인스턴스 Public IP]
 4. 동작 확인
 
 #### 2.4 CloudFront를 사용한 데이터 전달
-1. CloudFront 기동
+1. CloudFront 작동
 2. Web (Web 콘텐츠 전달) 혹은 RTMP (스트리밍 전송 프로토콜)
 
 ## 3. Web application 서버 구축
+EC2를 사용한 Web application 서버 - RDS를 사용한 데이터베이스 서버
+
+#### 3.1 Application 개발 환경 구축
+1. AWS Toolkit for Eclipse 설치
+2. IAM을 사용하여 Access User 생성
+3. AWS Toolkit에 인증
+
+#### 3.2 MySQL에 의한 데이터베이스 서버 구축
+1. 보안그룹생성 (TCP port : 3306)
+2. RDS Parameter Group 생성 (Mysql 사용 파라미터)
+3. RDS 인스턴스 생성
+4. AWS Toolkit에서 데이터 등록
+~~~
+Mysql 접속
+$ cd /usr/local/mysql/bin
+$ ./mysql -h [End Point URL] -P 3306 -u [사용자 이름] -p
+~~~
+#### 3.3 Tomcat - Web Application 서버 구축
+1. 보안그룹생성 (TCP Port : 8080)
+2. EC2 인스턴스 생성 (커스텀 AMI를 사용하여 새로운 EC2 인스턴스 생성 후 Elastic IP 할당)
+3. Apache Tomcat 설치
+~~~
+Java 버전 8로 변경 (초기는 Java 7)
+$ sudo yum -y install java-1.8.0-openjdk-devel
+$ sudo alternatives --config java
+
+Tomcat8 설치
+$ sudo yum -y install tomcat8
+
+JDBC 드라이버 설치
+$ sudo yum install -y mysql-connector-java
+~~~
+4. Web Application Deploy (.War file EC2 인스턴스로 업로드)
+~~~
+$ sudo cp [.war 파일 경로] /usr/share/tomcat8/webapps
+~~~
+5. Tomcat8 작동
+~~~
+Tomcat 8 작동 및 자동실행
+$ sudo service tomcat8 start
+$ sudo chkconfig tomcat8 on
+
+Tomcat8의 GUI deploy
+$ sudo yum -y install tomcat8-admin-webapps
+> http://[EC2 Public DNS]:8080/manager
+
+Tomcat8 manager 403 access denied 문제 발생 시
+$ sudo vi /usr/shard/tomcat8/conf/tomcat-users.xml
+> 맨 아래 manager관련 role의 주석을 없앤다.
+
+$ sudo vi /usr/share/tomcat8/webapps/manager/META-INF/context.xml
+<!-- <Valve className="org.apache.catalina.valves.RemoteAddrValve"
+     allow="127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1" /> -->
+> 주석 처리 해준다.
+~~~
+6. 동작 확인
+~~~
+> http://[EC2 Public DNS]:8080/[War name]/[File name]
 ~~~
 
+## 4. 네크워크 구축
+~~~
 ~~~
