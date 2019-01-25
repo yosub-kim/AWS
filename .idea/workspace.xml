@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2c43ac03-8f2f-412e-a416-fa585f084146" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/aws-rds-sample/WebAPSample.war" beforeDir="false" afterPath="$PROJECT_DIR$/samples/aws-rds-sample/WebAPSample.war" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,8 +23,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="653">
-                <caret line="95" column="8" selection-start-line="95" selection-start-column="8" selection-end-line="95" selection-end-column="8" />
+              <first_editor relative-caret-position="238">
+                <caret line="14" column="36" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
               </first_editor>
               <second_editor />
             </state>
@@ -50,9 +52,9 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="y" value="23" />
-    <option name="width" value="1249" />
+    <option name="width" value="1295" />
     <option name="height" value="1016" />
   </component>
   <component name="ProjectView">
@@ -60,7 +62,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -78,6 +79,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -115,18 +117,20 @@
       <workItem from="1548139860845" duration="672000" />
       <workItem from="1548148981334" duration="3628000" />
       <workItem from="1548152905770" duration="318000" />
-      <workItem from="1548171679736" duration="3228000" />
+      <workItem from="1548171679736" duration="3603000" />
+      <workItem from="1548396255748" duration="2114000" />
+      <workItem from="1548420885617" duration="83000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8630000" />
+    <option name="totallyTimeSpent" value="11202000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1249" height="1016" extended-state="0" />
+    <frame x="0" y="23" width="1295" height="1016" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1797846" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17797287" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -163,8 +167,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="653">
-            <caret line="95" column="8" selection-start-line="95" selection-start-column="8" selection-end-line="95" selection-end-column="8" />
+          <first_editor relative-caret-position="238">
+            <caret line="14" column="36" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
           </first_editor>
           <second_editor />
         </state>

@@ -11,6 +11,9 @@ OS : Amazon Linux AMI 2018.03.0(HVM)
 $ chmod 400 [.pem 파일]
 $ ssh -i [.pem 파일] ec2-user@[접속할 인스턴스 Public IP]
 
+REMOTE HOST IDENTIFICATION HAS CHANGED 문제 발생 시
+$ ssh-kengen -R [접속할 인스턴스 Public IP]
+
 Web 서버 설치 및 자동실행
 $ sudo yum -y update
 $ sudo yum install -y httpd
@@ -57,7 +60,7 @@ $ ./mysql -h [End Point URL] -P 3306 -u [사용자 이름] -p
 ~~~
 #### 3.3 Tomcat - Web Application 서버 구축
 1. 보안그룹생성 (TCP Port : 8080)
-2. EC2 인스턴스 생성 (커스텀 AMI를 사용하여 새로운 EC2 인스턴스 생성 후 Elastic IP 할당)
+2. EC2 인스턴스 생성 
 3. Apache Tomcat 설치
 ~~~
 Java 버전 8로 변경 (초기는 Java 7)
@@ -85,18 +88,23 @@ $ sudo yum -y install tomcat8-admin-webapps
 > http://[EC2 Public DNS]:8080/manager
 
 Tomcat8 manager 403 access denied 문제 발생 시
-$ sudo vi /usr/shard/tomcat8/conf/tomcat-users.xml
+$ sudo vi /usr/share/tomcat8/conf/tomcat-users.xml
 > 맨 아래 manager관련 role의 주석을 없앤다.
 
 $ sudo vi /usr/share/tomcat8/webapps/manager/META-INF/context.xml
 <!-- <Valve className="org.apache.catalina.valves.RemoteAddrValve"
      allow="127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1" /> -->
 > 주석 처리 해준다.
+
+$ sudo service tomcat8 restart
 ~~~
-#### 3.6 동작 확인
+#### 3.6 Tomcat8 동작 확인
 ~~~
 > http://[EC2 Public DNS]:8080/[War name]/[File name]
 ~~~
+#### 3.7 WAS용 AMI 생성
+1. 커스텀 AMI를 사용하여 새로운 EC2 인스턴스 생성
+2. Elastic IP 할당
 
 ## 4. 네크워크 구축
 ~~~
