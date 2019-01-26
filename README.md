@@ -115,7 +115,7 @@ $ sudo service tomcat8 restart
 (인바운드 : EC2 인스턴스로 향하는 통신 정책 , 아웃바운드 : 외부 네트워크로 향하는 통신 정책)
 2. 통신 동작 확인
 
-#### 4.2 VPC에 의한 가상 네트워크 구축
+#### 4.2 VPC (Virtual Private Cloud)에 의한 가상 네트워크 구축
 * Network Structure
 ![image](/samples/image.jpg)
 
@@ -136,7 +136,7 @@ $ mysql -h [End Point URL] -P 3306 -u [사용자 이름] -p
 $ chmod 400 [.pem 파일]
 
 8.4 접속
-$ ssh -i [.pem 파일] [node Private DNS]
+$ ssh -i [.pem 파일] [Web-node Private DNS]
 
 8.5 동작확인
 ~~~
