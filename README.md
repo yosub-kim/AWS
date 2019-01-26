@@ -1,7 +1,9 @@
 # Amazon Web Services 
 AWS를 활용하자.
+
 ## 1. 클라우드 서비스, AWS 기본
 기본적인 클라우드 서비스 및 AWS 서비스
+
 ## 2. Web 서버 구축
 
 #### 2.1 EC2를 사용한 Web 서버 구축
@@ -107,5 +109,10 @@ $ sudo service tomcat8 restart
 2. Elastic IP 할당
 
 ## 4. 네크워크 구축
+
+#### 4.1 보안 그룹에 의한 패킷 필터링
+Access Control List 설정
+1. 인바운드와 아웃바운드 수정
+(인바운드 : EC2 인스턴스로 향하는 통신 정책 , 아웃바운드 : 외부 네트워크로 향하는 통신 정책)
 ~~~
 ~~~
