@@ -21,8 +21,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="740">
-                <caret line="115" column="54" selection-start-line="115" selection-start-column="54" selection-end-line="115" selection-end-column="54" />
+              <first_editor relative-caret-position="874">
+                <caret line="125" column="31" selection-start-line="125" selection-start-column="31" selection-end-line="125" selection-end-column="31" />
               </first_editor>
               <second_editor />
             </state>
@@ -52,7 +52,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
-    <option name="width" value="1295" />
+    <option name="width" value="1859" />
     <option name="height" value="1016" />
   </component>
   <component name="ProjectView">
@@ -89,6 +89,11 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/samples" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -118,18 +123,18 @@
       <workItem from="1548171679736" duration="3603000" />
       <workItem from="1548396255748" duration="2114000" />
       <workItem from="1548420885617" duration="260000" />
-      <workItem from="1548489402564" duration="238000" />
+      <workItem from="1548489402564" duration="2816000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11617000" />
+    <option name="totallyTimeSpent" value="14195000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1295" height="1016" extended-state="0" />
+    <frame x="0" y="23" width="1859" height="1016" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18036711" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12438085" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -163,11 +168,14 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/samples/image.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="740">
-            <caret line="115" column="54" selection-start-line="115" selection-start-column="54" selection-end-line="115" selection-end-column="54" />
+          <first_editor relative-caret-position="874">
+            <caret line="125" column="31" selection-start-line="125" selection-start-column="31" selection-end-line="125" selection-end-column="31" />
           </first_editor>
           <second_editor />
         </state>

@@ -111,8 +111,36 @@ $ sudo service tomcat8 restart
 ## 4. 네크워크 구축
 
 #### 4.1 보안 그룹에 의한 패킷 필터링
-Access Control List 설정
-1. 인바운드와 아웃바운드 수정
+1. 인바운드와 아웃바운드 수정 <p>
 (인바운드 : EC2 인스턴스로 향하는 통신 정책 , 아웃바운드 : 외부 네트워크로 향하는 통신 정책)
+2. 통신 동작 확인
+
+#### 4.2 VPC에 의한 가상 네트워크 구축
+* Network Structure
+![image](/samples/image.jpg)
+
+1. VPC 생성
+2. 서브넷 마스크 생성
+3. RDB 서브넷 그룹 생성 (RDS-Master, RDS-Slave)
+4. 게이트웨이 생성
+5. 보안 그룹 생성 (Client : TCP-8080 , Maintenance : SSH-22)
+6. EC2, RDS 인스턴스 생성
+7. Load Balancer 생성
+8. Maintenance 네트워크 구성 및 동작 확인
+~~~
+8.1 Maintenance용 EC2 인스턴스 로그인
+8.2 RDS 인스턴스에 접속
+$ mysql -h [End Point URL] -P 3306 -u [사용자 이름] -p
+
+8.3 Private Key 업로드 (다른 EC2 인스턴스에 SSH로 접속)
+$ chmod 400 [.pem 파일]
+
+8.4 접속
+$ ssh -i [.pem 파일] [node Private DNS]
+
+8.5 동작확인
+~~~
+
+## 5. AWS Security
 ~~~
 ~~~
