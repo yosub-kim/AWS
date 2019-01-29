@@ -233,3 +233,49 @@ $ EXPORT 4848 8080
 ~~~
 $ CMD ["asadmin", "start-domain", "-v"]
 ~~~
+10. Dockerfile 의 Docker 이미지 생성
+~~~
+$ docker build -t [생성하는 이미지 이름]:[태그명] [Dockerfile 위치]
+$ docker build -t [사용자 이름]/docker-glassfish:1.0
+$ docker images
+~~~
+
+#### 6.3 Docker 이미지 공개
+1. Docker Hub 계정 등록
+2. Docker Hub에 공개
+~~~
+$ docker login
+$ docker push [사용자이름]/docker-glassfish:1.0
+~~~
+
+#### 6.4 AWS에서 Docker 실행
+1. EC2를 사용하는 방법 
+2. ECS를 사용하는 방법
+3. Elastic Beanstalk를 사용하는 방법
+
+#### 6.5 EC2에서 사용하는 방법
+1. EC2에 대한 Docker 설치
+~~~
+$ sudo service docker start
+~~~
+2. Docker 컨테이너 실행
+~~~
+$ sudo docker pull [사용자 이름]/docker-glassfish:1.0
+$ sudo docker images
+$ sudo docker run [옵션] --name [컨테이너 이름] [이미지 이름:태그 이름]
+
+ex) "glassfish-container"이라는 이름의 컨테이너를 "[사용자 이름]/docker-glassfish:1.0"이라는 이름의 docker 이미지를 기반으로 실행하고, 8080, 4848번 포트를 매핑하겠다.
+$ sudo docker run -d --name glassfish-container -p 8080:8080 -p 4848:4848 [사용자 이름]/docker-glassfish:1.0
+~~~
+
+#### 6.6 ECS에서 사용하는 방법
+1. ECS 시작
+2. 컨테이너 값 설정
+3. 서비스 구성
+4. 부하 분산 정의 (ELB)
+5. Security 정의 (IAM)
+6. 클러스터 정의
+7. Docker 클러스터 실행
+~~~
+> http://[ELB의 DNS 이름]:8080/DockerSample/
+~~~
