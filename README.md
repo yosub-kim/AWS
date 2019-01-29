@@ -145,15 +145,91 @@ $ ssh -i [.pem 파일] [Web-node Private DNS]
 #### 5.1 IAM을 이용한 사용자 계정 관리
 IAM : AWS가 제공하는 사용자 계정 관리 서비스
 
-##### 5.1.1 Android & IAM
+##### 5.1.1 IAM으로 Android 조작
 1. Google Authenticator 설치
 2. IAM에서 가상 MFA 연동
 3. AWS 접속 시 인증 시스템 입력
 
-##### 5.1.2 IAM으로 AWS 조작
+##### 5.1.2 IAM으로 AWS 개인 조작
 1. IAM 계정 생성
 2. 관리 정책 추가
 3. [IAM 사용자 로그인 링크] URL 접속
 4. 로그인 시 추가한 정책을 제외하고 접속 불가 
+
+##### 5.1.3 IAM으로 AWS 그룹 조작
+1. IAM 그룹 생성
+2. 관리 정책 추가
+3. IAM 계정을 그룹에 추가
+
+#### 5.2 데이터 암호화
+1. EC2 인스턴스에 SSH 접속 (private key)
+2. S3 데이터 암호화 (AWS S3 Service 마스터 키 사용)
+3. RDS 데이터 암호화 (AWS Key Management Service 마스터 키 사용)
+
+
+## 6. Docker 컨테이너
+가상화 환경에서 애플리케이션을 관리/실행하기 위한 오픈 소스 기반의 플랫폼
+
+#### 6.1 Docker 설치
+Docker를 설치하는 방법은 크게 Docker for Mac, Docker Toolbox 2가지가 있다.<br>
+* Docker for Mac 사용 시 Applications 폴더 내에 app으로 관리, 가상화는 HyperKit 을 통해 이루어진다.
+* Docker Toolbox 사용 시 /usr/local/bin 폴더에 docker, docker-compose, docker-machine이 설치, 가상화는 VirtualBox 을 통해 이루어진다.
+
+1. Docker Toolbox 설치
 ~~~
+Docker run
+$ docker run [Docker 이미지명] [실행 명령어]
+
+'Hello world 출력 시'
+$ docker run ubuntu:latest /bin/echo 'Hello world'
+~~~
+
+#### 6.2 Docker 이미지 생성
+Dockerfile : 인프라 구성을 기술한 파일
+1. JavaEE의 애플리케이션을 실행을 위한 WAS인 GlassFish 설치
+2. Dockerfile 생성
+~~~
+$ mkdir sample && cd $_
+$ touch Dockerfile
+~~~
+3. 베이스 이미지 지정
+~~~
+glassfish를 베이스 이미지로 지정
+$ FROM glassfish:4.1-jdk8
+~~~
+4. 생성자 정보
+~~~
+$ MAINTAINER [e-mail]
+~~~
+5. 환경 변수 설정
+~~~
+$ ENV GLASSFISH_HOME /usr/local/glassfish4
+$ ENV PASSWORD glasspass
+$ ENV TMPFILE /tmp/passfile
+~~~
+6. 명령어 실행
+~~~
+관리자 비밀 번호와 보안 설정
+$ RUN echo "AS_ADMIN_PASSWORD=">$TMPFILE && \
+      echo "AS_ADMIN_NEWPASSWORD=${PASSWORD}">>TMPFILE && \
+      asadmin --user=addmin --passwordfile=$TMPFILE change-admin-password --domain_name domain1 && \
+      asadmin start-domain && \
+      echo "AS_ADMIN_NEWPASSWORD=${PASSWORD}">TMPFILE && \
+      asadmin --user=addmin --passwordfile=$TMPFILE enable-secure-admin && \
+      asadmin --user=admin stop-domain && \
+      rm $TMPFILE
+~~~
+7. Web Application Deploy
+~~~
+war 콘텐츠 배치
+$ ADD DockerSample.war $ GLASSFISH_HOME/glassfish/domains/domain1/autodeploy
+~~~
+8. 포트 개방
+~~~
+glassfish가 사용하는 4848, 8080 포트 개방
+$ EXPORT 4848 8080
+~~~
+9. GlassFish 기동
+~~~
+$ CMD ["asadmin", "start-domain", "-v"]
 ~~~
