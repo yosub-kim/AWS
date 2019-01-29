@@ -141,5 +141,19 @@ $ ssh -i [.pem 파일] [Web-node Private DNS]
 ~~~
 
 ## 5. AWS Security
+
+#### 5.1 IAM을 이용한 사용자 계정 관리
+IAM : AWS가 제공하는 사용자 계정 관리 서비스
+
+##### 5.1.1 Android & IAM
+1. Google Authenticator 설치
+2. IAM에서 가상 MFA 연동
+3. AWS 접속 시 인증 시스템 입력
+
+##### 5.1.2 IAM으로 AWS 조작
+1. IAM 계정 생성
+2. 관리 정책 추가
+3. [IAM 사용자 로그인 링크] URL 접속
+4. 로그인 시 추가한 정책을 제외하고 접속 불가 
 ~~~
 ~~~
