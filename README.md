@@ -280,3 +280,14 @@ $ sudo docker run -d --name glassfish-container -p 8080:8080 -p 4848:4848 [사�
 > http://[ELB의 DNS 이름]:8080/DockerSample/
 ~~~
 ## 7. 시스템 운용
+
+#### 7.1 CloudWatch에 의한 감시
+
+#### 7.2 WordPress 환경의 자동 구성
+1. CloudFormation 기동
+2. 스택 형성
+3. 동작 확인
+
+#### 7.3 데이터 백업과 복구
+1. 스냅샷에 의한 데이터 백업 & 복구
+2. RDS 또한 DB 스냅샷에 의한 데이터 백업 & 복구
