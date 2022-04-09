@@ -1,5 +1,5 @@
 # Amazon Web Services 
-AWS를 활용하자.
+AWS
 
 ## 1. 클라우드 서비스, AWS 기본
 기본적인 클라우드 서비스 및 AWS 서비스
